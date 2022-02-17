@@ -14,5 +14,11 @@ const phrases = [
     "see what i could pull",
     "im strange",
 ]
-//
+// Grabs a random phrase to be split into an array of characters
+const getRandomPhraseAsArray = (arr) => {
+    let getLetter = math.floor(math.random() * arr.length)
+    let phrases = arr[getLetter]
+
+    return phrases.split("");
+};
 
