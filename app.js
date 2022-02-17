@@ -36,6 +36,9 @@ const addPhraseToDisplay = (arr) => {
         }
         phrase.append(li)
     }
-
 }
 
+// Checks to see if a letter matches a letter in one of the phrases
+const checkLetter = (button) => {
+
+}
