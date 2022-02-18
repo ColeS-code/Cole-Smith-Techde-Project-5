@@ -38,7 +38,7 @@ const addPhraseToDisplay = (arr) => {
     }
 }
 
-// Checks to see if a button matches a letter in one of the phrases
+// Checks to see if a button matches a letter in any of the phrases
 const checkLetter = (button) => {
     let match = null
     const listItms = phrase.children
@@ -52,3 +52,14 @@ const checkLetter = (button) => {
     }
     return match 
 }
+
+//
+qwerty.addEventListener("click", (e) => {
+    if (e.target.tagName === "BUTTON" && !e.target.classList.contains("chosen")) {
+        e.target.classList.add("chosen")
+        let match = checkLetter(e.target)
+        if (match =! checkLetter) {
+            //////////////////////////////////////
+        }
+    }
+});
