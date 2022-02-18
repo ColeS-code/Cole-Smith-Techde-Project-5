@@ -28,7 +28,7 @@ const getRandomPhraseAsArray = (arr) => {
 const addPhraseToDisplay = (arr) => {
     for(let char of arr) {
         const li = document.createElement("li")
-        li.innerHTML = char;
+        li.innerText = char;
         if (char === "letter") {
             li.classList.add("letter")
         } else {
@@ -38,7 +38,17 @@ const addPhraseToDisplay = (arr) => {
     }
 }
 
-// Checks to see if a letter matches a letter in one of the phrases
+// Checks to see if a button matches a letter in one of the phrases
 const checkLetter = (button) => {
+    let match = null
+    const listItms = phrase.children
 
+    button.disabled = true
+    for (let li of listItms) {
+        if (button.innerText === li.innerText) {
+            li.classList.add("show")
+            match = button.innerText
+        }
+    }
+    return match 
 }
