@@ -66,7 +66,7 @@ qwerty.addEventListener("click", (e) => {
     checkWin()
 });
 
-// checks if the letter and show constants are equal in length, then checks to see if missed is greater thna four
+// checks if the letter and show constants are equal in length, then checks to see if missed is greater than four
 const checkWin = () => {
     const letter = document.querySelectorAll(".letter")
     const show = document.querySelectorAll(".show")
@@ -83,3 +83,6 @@ const checkWin = () => {
         overlay.style.display = "flex"
     }
 } 
+
+// listens for when to resart the game using the resetGame function
+startGame.addEventListener('click', () => resetGame())
