@@ -53,13 +53,17 @@ const checkLetter = (button) => {
     return match 
 }
 
-//
+// listens for a click which then will decide whether to dock a heart or add the 'chosen' class to a letter
 qwerty.addEventListener("click", (e) => {
     if (e.target.tagName === "BUTTON" && !e.target.classList.contains("chosen")) {
         e.target.classList.add("chosen")
         let match = checkLetter(e.target)
         if (match != checkLetter) {
-            
+            hearts.missed.innerHTML = '<img src="images/lostHeart.png" height="35px" width="30px"/>'
+            missed += 1
         }
     }
+    checkWin()
 });
+
+// 
