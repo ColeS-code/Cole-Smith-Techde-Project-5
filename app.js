@@ -86,3 +86,21 @@ const checkWin = () => {
 
 // listens for when to resart the game using the resetGame function
 startGame.addEventListener('click', () => resetGame())
+
+// 
+const resetGame = () => {
+    startGame.innerText = "Try Again?"
+    missed = 0;
+    phrase.innerHTML = ""
+    let newPhrase = getRandomPhraseAsArray(phrases)
+    addPhraseToDisplay(newPhrase)
+    overlay.style.display = "none"
+    for (let heart of hearts) {
+        heart.innerHTML = '<img src="images/liveHeart.png" height="35px" width="30px"/>'
+    }
+    for (let button of buttons) {
+        button.className = ""
+        button.disabled = false
+
+    }
+}
