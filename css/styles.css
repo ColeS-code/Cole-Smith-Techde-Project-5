@@ -165,5 +165,5 @@ button {
 /* phrase transitions */
 
 .show {
-  transition: 5ms;
+  transition: transform 5ms;
 }
