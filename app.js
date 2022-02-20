@@ -58,8 +58,8 @@ qwerty.addEventListener("click", (e) => {
     if (e.target.tagName === "BUTTON" && !e.target.classList.contains("chosen")) {
         e.target.classList.add("chosen")
         let match = checkLetter(e.target)
-        if (match =! checkLetter) {
-            //////////////////////////////////////
+        if (match != checkLetter) {
+            
         }
     }
 });
