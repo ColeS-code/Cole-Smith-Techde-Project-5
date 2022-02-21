@@ -18,22 +18,18 @@ const phrases = [
 
 // Grabs a random phrase to be split into an array of characters
 const getRandomPhraseAsArray = (arr) => {
-    let getLetter = math.floor(math.random() * arr.length)
+    let getLetter = Math.floor(Math.random() * arr.length)
     let phrase = arr[getLetter]
 
     return phrase.split("");
-};
+}
 
 // Loops through the array of characters to see which are spaces and which are letters
 const addPhraseToDisplay = (arr) => {
     for(let char of arr) {
         const li = document.createElement("li")
         li.innerText = char;
-        if (char === "letter") {
-            li.classList.add("letter")
-        } else {
-            li.classList.add("space")
-        }
+        char === " " ? li.classList.add("space") : li.classList.add("letter")
         phrase.append(li)
     }
 }
@@ -58,8 +54,8 @@ qwerty.addEventListener("click", (e) => {
     if (e.target.tagName === "BUTTON" && !e.target.classList.contains("chosen")) {
         e.target.classList.add("chosen")
         let match = checkLetter(e.target)
-        if (match != checkLetter) {
-            hearts.missed.innerHTML = '<img src="images/lostHeart.png" height="35px" width="30px"/>'
+        if (!match) {
+            hearts[missed].innerHTML = '<img src="images/lostHeart.png" height="35px" width="30px"/>'
             missed += 1
         }
     }
