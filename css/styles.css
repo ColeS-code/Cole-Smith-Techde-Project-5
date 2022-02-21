@@ -165,5 +165,6 @@ button {
 /* phrase transitions */
 
 .show {
-  transition: transform 5ms;
+  transition: transform 1s;
+  transform: rotate(360deg);
 }

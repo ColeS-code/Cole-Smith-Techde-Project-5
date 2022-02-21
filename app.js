@@ -64,17 +64,17 @@ qwerty.addEventListener("click", (e) => {
 
 // checks if the letter and show constants are equal in length, then checks to see if missed is greater than four
 const checkWin = () => {
-    const letter = document.querySelectorAll(".letter")
-    const show = document.querySelectorAll(".show")
+    const letters = document.querySelectorAll(".letter")
+    const shown = document.querySelectorAll(".show")
     let message = document.querySelector(".title")
 
-    if (letter.length === show.length) {
-        overlay.className = "Win"
+    if (letters.length === shown.length) {
+        overlay.className = "win"
         message.innerText = "Nice job, you won!"
         overlay.style.display = "flex"
     }
     if (missed > 4) {
-        overlay.className = "Lose"
+        overlay.className = "lose"
         message.innerText = "Too bad, you lost!"
         overlay.style.display = "flex"
     }
@@ -97,6 +97,5 @@ const resetGame = () => {
     for (let button of buttons) {
         button.className = ""
         button.disabled = false
-
     }
 }
