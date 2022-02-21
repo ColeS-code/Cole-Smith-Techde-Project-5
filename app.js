@@ -83,7 +83,7 @@ const checkWin = () => {
 // listens for when to resart the game using the resetGame function
 startGame.addEventListener('click', () => resetGame())
 
-// 
+// wipes the current screen and loads a new instance on click
 const resetGame = () => {
     startGame.innerText = "Try Again?"
     missed = 0;
